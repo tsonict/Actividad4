@@ -1,3 +1,5 @@
+from zodiaco import signo
+
 def cuadrado(a):
     return a*4
 
@@ -6,7 +8,6 @@ def triangulo(b, h):
 
 def circulo(radio:float):
     return 3.1416*radio**2
-
 
 while True :
     print("1). Calcular area de cuadrado, triangulo y circulo.")
@@ -40,7 +41,9 @@ while True :
                 break
 
     elif opc == "2":
-        print("opcion 2")
+        dia = int(input("Introduce tu dia de nacimiento: "))
+        mes = int(input("Introduce tu mes de nacimiento"))
+        signo(dia, mes)
     elif opc == "3":
         print("opcion 3")
     elif opc == "0":
