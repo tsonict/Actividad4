@@ -9,6 +9,13 @@ def triangulo(b, h):
 def circulo(radio:float):
     return 3.1416*radio**2
 
+def numeroe(limite:int):
+    e = f = 1.0
+    for i in range(2, limite):
+        e += 1.0/f
+        f *=i
+    return e
+
 while True :
     print("1). Calcular area de cuadrado, triangulo y circulo.")
     print("2). Signo zodiacal.")
@@ -45,7 +52,8 @@ while True :
         mes = int(input("Introduce tu mes de nacimiento"))
         signo(dia, mes)
     elif opc == "3":
-        print("opcion 3")
+        limite = int(input("Introduce el limite (Mayor limite, mas precision del numero)"))
+        print(numeroe(limite))
     elif opc == "0":
         print("Saliendo...")
         break
